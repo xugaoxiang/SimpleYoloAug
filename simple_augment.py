@@ -13,6 +13,9 @@ args = parser.parse_args()
 list_of_image_files = []
 list_of_annotation_files = []
 
+if not os.path.exists(args.outdir):
+    os.makedirs(args.outdir)
+
 for file in os.listdir(args.indir):
     if file.endswith(".jpg"):
         list_of_image_files.append(os.path.join(args.indir, file))
@@ -70,16 +73,3 @@ for img, ann in tqdm(DatasetTuple):
             
             Write_File(aug_img, aug_annot, img_out_path, aug_out_path)
             del aug_img, aug_annot
-
-
-
-
-
-
-
-
-
-
-
-
-
