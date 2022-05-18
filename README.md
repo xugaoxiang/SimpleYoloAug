@@ -1,6 +1,8 @@
 # SimpleYoloAug
 a really simple wrapper over python imgaug for yolo datasets
 
+需要将图片及对应的标注 `txt` 文件放在同一目录下
+
 How to use
 
 ```

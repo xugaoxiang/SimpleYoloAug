@@ -6,6 +6,7 @@ class AnnotationException(Exception): pass
 
 
 def load_File(fpath_image, fpath_annotation):
+    print('start load file: {}'.format(fpath_image))
     img = cv2.imread(fpath_image)[:,:,::-1]   #opencv loads images in bgr. the [:,:,::-1] does bgr -> rgb
     
     height, width, channels = img.shape
