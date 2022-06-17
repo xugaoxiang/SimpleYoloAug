@@ -21,6 +21,8 @@ for file in os.listdir(args.indir):
         list_of_image_files.append(os.path.join(args.indir, file))
     elif file.endswith(".jpeg"):
         list_of_image_files.append(os.path.join(args.indir, file))
+    elif file.endswith(".png"):
+        list_of_image_files.append(os.path.join(args.indir, file))
         
     elif file.endswith(".txt"):
         list_of_annotation_files.append(os.path.join(args.indir, file))
